@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class TopicService {
 	List<Topic> topics = new ArrayList<>(Arrays.asList(
-			new Topic("spring","Spring FrameWork","Spring framework description"),
+			new Topic("springboot","SpringBoot FrameWork","SpringBoot framework description"),
 			new Topic("spring","Spring FrameWork","Spring framework description"),
 			new Topic("java","Java FrameWork","Java framework description")
 			));
