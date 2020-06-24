@@ -21,17 +21,17 @@ public class CourseService {
 	 * new Course("java","Java FrameWork","Java framework description") ));
 	 */
 	
-	public List<Course> getAllCourses(String id) {
+	public List<Course> getAllCourses(String topicId) {
 		//return topics;	
 		List<Course> courses = new ArrayList();
-		courseRepository.findAll()
+		courseRepository.findByTopicId(topicId)
 		.forEach(courses::add);
 		return courses;
 	}
 
 	public Optional<Course> getCourse(String id) {
 		//return topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
-		return courseRepository.findById(id);	
+		return courseRepository.findById(id);
 	}
 	
 	public void addCourse(Course course) {
